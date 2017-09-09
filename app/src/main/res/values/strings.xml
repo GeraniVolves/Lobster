@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Loobster</string>
+    <string name="create">Create</string>
+    <string name="done">Done</string>
+    <string name="create_something_great">Create something great</string>
+    <string name="design">Design</string>
+    <string name="choose_stage">choose stage</string>
+    <string name="choose_project">choose project</string>
+    <string name="lobster_task">Lobster Task</string>
+    <string name="to_do">to-do</string>
+    <string name="name">name</string>
+</resources>
