@@ -49,7 +49,7 @@
         android:layout_height="1dp"
         android:background="#E8E8E8"
         />
-    <ScrollView
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -61,11 +61,13 @@
             android:weight="1"
             android:background="#FFFFFF"
             android:stretchColumns="1">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,13 +75,14 @@
                     android:layout_marginTop="24dp"
                     android:text="@string/name"
                     />
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="6dp"
                     android:background="@null"
-                    android:hint="Add new stage"
+                    android:hint="Add new project"
                     android:textColorHint="#C8C7CC"
                     />
             </LinearLayout>
@@ -87,7 +90,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="#FFFFFF"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -95,65 +97,13 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     >
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="project master"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="28dp"
-                        android:text="@string/choose_project"
+                        android:layout_marginTop="30dp"
                         />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/lobster_task"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="28dp"
-                        android:text="dead line"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="15/06/2017"
-                        android:textSize="18sp"
-                        android:textColor="#000000"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="stage leader"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="30dp"
-                            />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -175,7 +125,7 @@
                                 android:textColor="#000000"
                                 />
                         </LinearLayout>
-                    </LinearLayout>
+                </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -185,50 +135,54 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="part of project"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="24dp"
+                            android:text="dead line"
                             />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0%"
+                            android:layout_marginTop="8dp"
+                            android:text="15/06/2017 12:00"
+                            android:textColor="#000000"
                             android:textSize="18sp"
-                            android:layout_marginTop="4dp"
-                            android:textColor="#262626"
                             />
                     </LinearLayout>
             </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="description"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="30dp"
-                        />
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Some text about stage"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="8dp"
-                        android:textColor="#C8C7CC"
-                        android:background="#FFFFFF"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
+                    android:text="description"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="30dp"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"/>
-                </LinearLayout>
+                    android:text="Some text about project"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#C8C7CC"
+                    android:background="#FFFFFF"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginTop="270dp"
+                    android:textColor="#977AE2"
+                    android:text="You can use project templates >"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    />
+            </LinearLayout>
         </TableLayout>
     </ScrollView>
     <LinearLayout
@@ -247,24 +201,29 @@
             android:textSize="16sp"
             android:textColor="#000000"
             />
+
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="100dp"
             android:layout_height="34dp"
-            android:text="Stage"
-            android:gravity="center"
             android:layout_weight="1"
+            android:gravity="center"
+            android:text="Stage"
             android:textColor="#000000"
             android:textSize="16sp"
             />
+
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="100dp"
             android:layout_height="34dp"
-            android:text="Project"
             android:gravity="center"
+            android:text="Project"
             android:textColor="#000000"
             android:textSize="16sp"
             android:weight="1"
             />
+
         <TextView
             android:layout_width="100dp"
             android:layout_height="34dp"
