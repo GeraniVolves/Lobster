@@ -5,50 +5,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.android.loobster.MainActivity"
+    android:background="#FFFFFF"
     >
-
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_add_photo_text"
+        android:background="#EFEFF4"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#C8C7CC"
+        android:text="Add post text"
         android:background="#FFFFFF"
-        >
-
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:padding="12dp"
-            android:src="@drawable/ic_action_close"
-            />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/create"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:gravity="center"
-            android:paddingLeft="22dp"
-            android:paddingRight="16dp"
-            android:text="Ok"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            />
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#E8E8E8"
         />
 </LinearLayout>

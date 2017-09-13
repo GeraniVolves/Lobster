@@ -13,7 +13,8 @@ class CreatePager extends FragmentPagerAdapter {
         fragments = new Fragment[]{
             new CreateTaskFragment(),
             new CreateStageFragment(),
-            new CreateProjectFragment()
+            new CreateProjectFragment(),
+            new CreatePostFragment()
         };
     }
 
