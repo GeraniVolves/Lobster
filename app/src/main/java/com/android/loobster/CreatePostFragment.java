@@ -7,10 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Created by Kseniya on 13.09.2017.
- */
-
 public class CreatePostFragment extends Fragment {
 
     @Nullable @Override
