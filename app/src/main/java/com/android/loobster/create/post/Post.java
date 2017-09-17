@@ -2,6 +2,10 @@ package com.android.loobster.create.post;
 
 public class Post {
 
-    String imageUrl;
-    String text;
+    public String imageUrl;
+    public String text;
+
+    public boolean hasImage() {
+        return imageUrl != null;
+    }
 }
