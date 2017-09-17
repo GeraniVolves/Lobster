@@ -1,4 +1,4 @@
-package com.android.loobster;
+package com.android.loobster.persons;
 
 
 import android.app.Activity;
@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.android.loobster.persons.PersonsListAdapter;
+import com.android.loobster.R;
 
-public class ToDoList extends Activity {
+public class PersonsListScreen extends Activity {
     private RecyclerView               mRecyclerView;
     private RecyclerView.Adapter       mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
