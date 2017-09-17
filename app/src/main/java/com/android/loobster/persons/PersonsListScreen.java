@@ -9,21 +9,22 @@ import android.support.v7.widget.RecyclerView;
 import com.android.loobster.R;
 
 public class PersonsListScreen extends Activity {
+
     private RecyclerView               mRecyclerView;
     private RecyclerView.Adapter       mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+
     private String[] myDataset = new String[] {
         "Country",
         "Sex",
         "Age"
-
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.to_do_list_screen);
-        mRecyclerView = (RecyclerView) findViewById(R.id.list);
+        mRecyclerView = findViewById(R.id.list);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView

@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class CreatePager extends FragmentPagerAdapter {
 
-
     private String tabTitles[] = new String[]{"Task", "Stage", "Project", "Post"};
     private Fragment[] fragments;
 
@@ -21,7 +20,6 @@ public class CreatePager extends FragmentPagerAdapter {
         };
 
     }
-
 
     @Override public int getCount() {
         return fragments.length;
