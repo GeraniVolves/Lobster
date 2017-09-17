@@ -1,4 +1,4 @@
-package com.android.loobster;
+package com.android.loobster.create;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

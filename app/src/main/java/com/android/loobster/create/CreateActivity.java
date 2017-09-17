@@ -1,9 +1,11 @@
-package com.android.loobster;
+package com.android.loobster.create;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
+import com.android.loobster.R;
 
 public class CreateActivity extends AppCompatActivity {
 

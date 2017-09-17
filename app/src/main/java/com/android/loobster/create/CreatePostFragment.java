@@ -1,4 +1,4 @@
-package com.android.loobster;
+package com.android.loobster.create;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class CreateProjectFragment extends Fragment {
+import com.android.loobster.R;
+
+public class CreatePostFragment extends Fragment {
 
     @Nullable @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_project, container, false);
+        return inflater.inflate(R.layout.activity_post, container, false);
     }
 }
