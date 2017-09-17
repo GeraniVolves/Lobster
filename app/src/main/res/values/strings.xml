@@ -9,4 +9,6 @@
     <string name="lobster_task">Lobster Task</string>
     <string name="to_do">to-do</string>
     <string name="name">name</string>
+    <string name="add_post_text">Add post text</string>
+    <string name="add_photo">Add Photo</string>
 </resources>

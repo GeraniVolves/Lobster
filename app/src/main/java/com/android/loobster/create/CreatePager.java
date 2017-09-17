@@ -34,4 +34,3 @@ public class CreatePager extends FragmentPagerAdapter {
         return tabTitles[position];
     }
 }
-

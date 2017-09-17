@@ -1,25 +1,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.android.loobster.MainActivity"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#FFFFFF"
+    android:orientation="vertical"
     >
-    <ImageView
+
+    <TextView
+        android:id="@+id/add_image"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:src="@drawable/ic_add_photo_text"
         android:background="#EFEFF4"
+        android:gravity="center"
+        android:text="@string/add_photo"
+        android:textColor="#CBCED2"
+        android:textStyle="bold"
         />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:textColor="#C8C7CC"
-        android:text="Add post text"
         android:background="#FFFFFF"
+        android:text="@string/add_post_text"
+        android:textColor="#C8C7CC"
         />
+
 </LinearLayout>
