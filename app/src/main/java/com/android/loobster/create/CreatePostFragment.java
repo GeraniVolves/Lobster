@@ -28,7 +28,7 @@ public class CreatePostFragment extends Fragment {
         CreatePostPageBinding dataBinding = DataBindingUtil.inflate(inflater, R.layout.create_post_page, container, false);
         dataBinding.addImage.setOnClickListener(view -> {
                 createPostViewModel.hasImage.set(true);
-                createPostViewModel.imageUrl.set("123 / 123");
+                createPostViewModel.imageUrl.set("https://www.w3schools.com/w3images/fjords.jpg");
             }
         );
         dataBinding.image.setOnClickListener(view -> createPostViewModel.hasImage.set(false));

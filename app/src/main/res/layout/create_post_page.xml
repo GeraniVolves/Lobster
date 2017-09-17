@@ -1,4 +1,6 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <data>
 
@@ -35,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:visibility="@{vm.hasImage ? View.VISIBLE : View.GONE}"
+            app:imageUrl="@{vm.imageUrl}"
             tools:visibility="visible"
             />
 
