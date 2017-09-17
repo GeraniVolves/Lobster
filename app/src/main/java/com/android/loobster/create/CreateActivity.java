@@ -18,6 +18,8 @@ public class CreateActivity extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        findViewById(R.id.close).setOnClickListener(v -> finish());
     }
 }
 
