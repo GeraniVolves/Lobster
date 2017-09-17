@@ -365,7 +365,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="6dp"
                     android:background="#FFFFFF"
-                    android:text="add label"
+                    android:hint="add label"
                     android:textColor="#C9C8CD"
                     />
             </LinearLayout>
