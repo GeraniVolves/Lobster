@@ -14,10 +14,20 @@ public class PersonsListScreen extends Activity {
     private RecyclerView.Adapter       mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-    private String[] myDataset = new String[] {
+    private String[] myDataset = new String[]{
         "Country",
         "Sex",
-        "Age"
+        "Age",
+        "Bob",
+        "Big Cock",
+        "Wet pussy",
+        "Hey Man",
+        "I'm dirty hacker",
+        "Lol Kekovich",
+        "Mda Mdamovich",
+        "Ilya Eremin",
+        "Crash",
+        "Hotfix"
     };
 
     @Override
