@@ -1,10 +1,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
-            name="post"
-            type="com.android.loobster.create.post.Post"
+            name="vm"
+            type="com.android.loobster.create.post.CreatePostViewModel"
             />
+
+        <import type="android.view.View" />
     </data>
 
     <LinearLayout
@@ -24,13 +27,14 @@
             android:text="@string/add_photo"
             android:textColor="#CBCED2"
             android:textStyle="bold"
+            android:visibility="@{vm.hasImage ? View.GONE : View.VISIBLE}"
             />
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:visibility="gone"
+            android:visibility="@{vm.hasImage ? View.VISIBLE : View.GONE}"
             tools:visibility="visible"
             />
 
@@ -41,9 +45,9 @@
             android:layout_marginTop="24dp"
             android:background="#FFFFFF"
             android:hint="@string/add_post_text"
-            android:textColor="#C8C7CC"
+            android:text="@{vm.text}"
+            android:textColorHint="#C8C7CC"
             />
 
     </LinearLayout>
-
 </layout>
