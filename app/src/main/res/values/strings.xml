@@ -11,4 +11,5 @@
     <string name="name">name</string>
     <string name="add_post_text">Add post text</string>
     <string name="add_photo">Add Photo</string>
+    <string name="description_log_in">The App lets you connect, interact and update your products</string>
 </resources>
