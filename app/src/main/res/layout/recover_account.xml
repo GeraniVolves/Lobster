@@ -3,13 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/log_in_bg"
+    android:background="#202020"
     >
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="end"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/circle_bg"
+        android:padding="8dp"
+        android:src="@drawable/ic_recovery_account_close"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#202020"
         android:orientation="vertical"
         >
 
@@ -27,7 +38,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="29dp"
+            android:layout_height="38dp"
             />
 
 
@@ -36,9 +47,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:text="Recover account"
+            android:text="@string/recover_account"
             android:textColor="#FFFFFF"
-            android:textSize="33dp"
+            android:textSize="33sp"
             android:textStyle="bold"
             />
 
@@ -50,13 +61,13 @@
             android:layout_marginTop="8dp"
             android:text="@string/recover_account_description"
             android:textColor="#FFFFFF"
-            android:textSize="19dp"
+            android:textSize="19sp"
             />
 
         <EditText
             style="@style/recover_account"
             android:layout_marginTop="30dp"
-            android:hint="email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             />
 
@@ -70,17 +81,17 @@
             android:gravity="center"
             android:paddingBottom="12dp"
             android:paddingTop="12dp"
-            android:text="Recover"
+            android:text="@string/recover"
             android:textColor="#0B0B0B"
             />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:background="#FF2D55"
         android:gravity="center"
-        android:text="We don't have an account with this mail"
+        android:text="@string/error_recover_account"
         android:textColor="#FFF9FA"
         android:visibility="gone"
         tools:visibility="visible"

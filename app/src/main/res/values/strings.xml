@@ -15,4 +15,26 @@
     <string name="recover_account_description">Enter mail to recover your account. Than we send special link to create new password.</string>
     <string name="create_password_description">You can use 5 or more characters. Minimum 1 character and 1 number.</string>
     <string name="recovery_account_success_description">Check your mail, open special link and create new password</string>
+    <string name="password">Password</string>
+    <string name="password_again">Password again</string>
+    <string name="create_password">Create password</string>
+    <string name="login">Login</string>
+    <string name="success">Success!</string>
+    <string name="recover_account">Recover account</string>
+    <string name="error_recover_account">We don\'t have an account with this mail</string>
+    <string name="email">Email</string>
+    <string name="recover">Recover</string>
+    <string name="error_log_in">Incorrect mail or password</string>
+    <string name="log_in_with_facebook">Log in with Facebook</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="you_have_not_an_account">You have not an account?</string>
+    <string name="i_forgot_my_password">I forgot my password</string>
+    <string name="log_in">Log In</string>
+    <string name="demo"><![CDATA[Demo >]]></string>
+    <string name="or">or</string>
+    <string name="full_name">Full name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_not_an_account">Already have not an account?</string>
+    <string name="sign_up_with_facebook">Sign Up with Facebook</string>
+    <string name="error_sign_up">This mail is already have in system</string>
 </resources>
