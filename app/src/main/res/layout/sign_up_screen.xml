@@ -1,125 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/sign_up_bg"
     >
 
-    <View
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="128dp"
+        >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Sign Up"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demo >"
+                android:gravity="end"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:gravity="center"
-        android:text="@string/description_log_in"
-        android:textSize="20sp"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Full name"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Email"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Password"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sign Up"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:gravity="center"
-        android:text="Sign Up"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="@string/description_log_in"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                />
+
+            <EditText
+
+                style="@style/authorization_input"
+                android:layout_marginTop="32dp"
+                android:hint="Full name"
+                />
+
+            <EditText
+                style="@style/authorization_input"
+                android:layout_marginTop="8dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                />
+
+            <EditText
+                style="@style/authorization_input"
+                android:layout_marginTop="8dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                />
+
+            <TextView
+                android:text="Sign Up"
+                style="@style/authorization_bottom"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
         android:gravity="bottom"
-        android:layout_marginBottom="40dp"
         android:orientation="vertical"
         >
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:gravity="center"
             >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:textSize="17sp"
                 android:text="Already have not an account?"
+                android:textColor="#D4A4CC"
+                android:textSize="17sp"
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="17sp"
                 android:layout_marginLeft="10dp"
                 android:text="Log In"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
                 />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="or"
             android:layout_marginTop="8dp"
-            android:textSize="17sp"
             android:gravity="center"
+            android:text="or"
+            android:textColor="#D4A4CC"
+            android:textSize="17sp"
             />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center"
+            android:orientation="horizontal"
             >
+
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@color/colorPrimary"
                 android:layout_marginTop="8dp"
+                android:src="@color/colorPrimary"
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up with Facebook"
-                android:textSize="17sp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="6dp"
+                android:text="Sign Up with Facebook"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
                 />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FF2D55"
+        android:gravity="center"
+        android:text="This mail is already have in system"
+        android:textColor="#FFF9FA"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+</FrameLayout>

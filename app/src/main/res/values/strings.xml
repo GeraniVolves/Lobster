@@ -12,4 +12,7 @@
     <string name="add_post_text">Add post text</string>
     <string name="add_photo">Add Photo</string>
     <string name="description_log_in">The App lets you connect, interact and update your products</string>
+    <string name="recover_account_description">Enter mail to recover your account. Than we send special link to create new password.</string>
+    <string name="create_password_description">You can use 5 or more characters. Minimum 1 character and 1 number.</string>
+    <string name="recovery_account_success_description">Check your mail, open special link and create new password</string>
 </resources>
