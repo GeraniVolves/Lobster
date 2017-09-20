@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/log_in_bg"
+    android:background="@drawable/sign_up_bg"
     >
 
     <ScrollView
@@ -21,8 +21,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Demo >"
                 android:gravity="end"
+                android:text="@string/demo"
                 android:textColor="#FFFFFF"
                 android:textSize="22sp"
                 />
@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Log In"
+                android:text="@string/sign_up"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -53,33 +53,32 @@
                 />
 
             <EditText
+
                 style="@style/authorization_input"
-                android:layout_marginTop="30dp"
-                android:hint="Email"
+                android:layout_marginTop="32dp"
+                android:hint="@string/full_name"
+                />
+
+            <EditText
+                style="@style/authorization_input"
+                android:layout_marginTop="8dp"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 />
 
             <EditText
                 style="@style/authorization_input"
                 android:layout_marginTop="8dp"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 />
 
             <TextView
                 style="@style/authorization_bottom"
-                android:text="Login"
+                android:text="@string/sign_up"
                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:text="I forgot my password"
-                android:textColor="#F3DCFA"
-                android:textSize="16sp"
-                />
+
         </LinearLayout>
     </ScrollView>
 
@@ -94,24 +93,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal"
             >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:text="You have not an account?"
-                android:textColor="#C2A2D8"
+                android:text="@string/already_have_not_an_account"
+                android:textColor="#D4A4CC"
                 android:textSize="17sp"
                 />
 
             <TextView
+                android:id="@+id/log_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="Sign Up"
-                android:textColor="#F8EBFD"
+                android:layout_marginRight="10dp"
+                android:text="@string/log_in"
+                android:textColor="#FFFFFF"
                 android:textSize="17sp"
                 />
         </LinearLayout>
@@ -121,8 +122,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="or"
-            android:textColor="#C2A2D8"
+            android:text="@string/or"
+            android:textColor="#D4A4CC"
             android:textSize="17sp"
             />
 
@@ -144,9 +145,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginTop="6dp"
-                android:text="Log in with Facebook"
-                android:textColor="#F8EBFD"
+                android:text="@string/sign_up_with_facebook"
+                android:textColor="#FFFFFF"
                 android:textSize="17sp"
                 />
         </LinearLayout>
@@ -154,10 +156,10 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
         android:background="#FF2D55"
         android:gravity="center"
-        android:text="Incorrect mail or password"
+        android:text="@string/error_sign_up"
         android:textColor="#FFF9FA"
         android:visibility="gone"
         tools:visibility="visible"
