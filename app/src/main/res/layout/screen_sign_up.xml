@@ -21,11 +21,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:gravity="end"
                 android:text="@string/demo"
                 android:textColor="#FFFFFF"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:textSize="22sp"
                 />
 
@@ -81,10 +81,10 @@
                 />
 
             <TextView
+                android:id="@+id/sign_up"
                 style="@style/authorization_bottom"
                 android:text="@string/sign_up"
                 />
-
 
         </LinearLayout>
     </ScrollView>
@@ -113,7 +113,7 @@
                 />
 
             <TextView
-                android:id="@+id/log_in"
+                android:id="@+id/login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -122,6 +122,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="17sp"
                 />
+
         </LinearLayout>
 
         <TextView

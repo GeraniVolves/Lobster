@@ -14,19 +14,19 @@
         android:theme="@style/AppTheme"
         >
 
-        <activity android:name=".create.CreateActivity">
+        <activity android:name=".create.CreateScreen">
 
         </activity>
-        <activity android:name=".LogInActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoginScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity">
-        </activity>
+        <activity android:name=".SignUpScreen" />
         <activity android:name=".persons.PersonsListScreen" />
+        <activity android:name=".RecoverAccountScreen" />
     </application>
 
 </manifest>
