@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.android.loobster.R;
 
-public class CreateActivity extends AppCompatActivity {
+public class CreateScreen extends AppCompatActivity {
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
