@@ -27,6 +27,7 @@
         <activity android:name=".SignUpScreen" />
         <activity android:name=".persons.PersonsListScreen" />
         <activity android:name=".RecoverAccountScreen" />
+        <activity android:name=".MainScreen"/>
     </application>
 
 </manifest>
