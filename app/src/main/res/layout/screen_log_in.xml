@@ -21,9 +21,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/demo"
                 android:gravity="end"
-                android:textColor="#FFFFFF"
+                android:text="@string/demo"
+                android:textColor="@color/clickable_text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:textSize="22sp"
                 />
 
@@ -37,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/log_in"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/login_title"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 />
@@ -45,18 +47,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="18dp"
                 android:gravity="center"
                 android:text="@string/description_log_in"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/login_title"
                 android:textSize="20sp"
                 />
 
             <EditText
                 style="@style/authorization_input"
                 android:layout_marginTop="30dp"
-                android:hint="Email"
+                android:hint="@string/email_username"
                 android:inputType="textEmailAddress"
+                android:textColor="@color/edit_text_color"
                 />
 
             <EditText
@@ -64,6 +69,7 @@
                 android:layout_marginTop="8dp"
                 android:hint="@string/password"
                 android:inputType="textPassword"
+                android:textColor="@color/edit_text_color"
                 />
 
             <TextView
@@ -77,8 +83,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:gravity="center"
-                android:text="@string/i_forgot_my_password"
-                android:textColor="#F3DCFA"
+                android:text="@string/forgot_password"
+                android:textColor="@color/clickable_text"
                 android:textSize="16sp"
                 />
         </LinearLayout>
@@ -96,12 +102,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:gravity="center"
             >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
                 android:text="@string/you_have_not_an_account"
                 android:textColor="#C2A2D8"
                 android:textSize="17sp"
@@ -112,9 +118,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:text="@string/sign_up"
-                android:textColor="#F8EBFD"
+                android:textColor="@color/clickable_text"
                 android:textSize="17sp"
                 />
         </LinearLayout>
@@ -150,7 +155,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="6dp"
                 android:text="@string/log_in_with_facebook"
-                android:textColor="#F8EBFD"
+                android:textColor="@color/clickable_text"
                 android:textSize="17sp"
                 />
         </LinearLayout>
@@ -162,7 +167,7 @@
         android:background="#FF2D55"
         android:gravity="center"
         android:text="@string/error_log_in"
-        android:textColor="#FFF9FA"
+        android:textColor="@color/login_error_text"
         android:visibility="gone"
         tools:visibility="visible"
         />

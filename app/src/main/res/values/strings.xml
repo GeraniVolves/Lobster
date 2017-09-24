@@ -28,13 +28,13 @@
     <string name="log_in_with_facebook">Log in with Facebook</string>
     <string name="sign_up">Sign Up</string>
     <string name="you_have_not_an_account">You have not an account?</string>
-    <string name="i_forgot_my_password">I forgot my password</string>
+    <string name="forgot_password"><u>I forgot my password</u></string>
     <string name="log_in">Log In</string>
     <string name="demo"><![CDATA[Demo >]]></string>
     <string name="or">or</string>
     <string name="full_name">Full name</string>
-    <string name="sign_up">Sign Up</string>
     <string name="already_have_not_an_account">Already have not an account?</string>
     <string name="sign_up_with_facebook">Sign Up with Facebook</string>
     <string name="error_sign_up">This mail is already have in system</string>
+    <string name="email_username">Email or username</string>
 </resources>
