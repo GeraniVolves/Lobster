@@ -27,8 +27,11 @@ class NavigateTo {
         context.startActivity(new Intent(context, CreateScreen.class));
     }
 
-    public static void main(@NonNull Context context) {
+    static void main(@NonNull Context context) {
         context.startActivity(new Intent(context, MainScreen.class));
     }
 
+    static void success(@NonNull Context context) {
+        context.startActivity(new Intent(context, RecoverAccountSuccess.class));
+    }
 }
