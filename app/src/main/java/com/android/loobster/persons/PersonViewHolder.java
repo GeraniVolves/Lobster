@@ -10,10 +10,16 @@ import com.android.loobster.R;
 public class PersonViewHolder extends RecyclerView.ViewHolder {
 
     TextView uiName;
+    TextView uiPosition;
 
     public PersonViewHolder(View view) {
         super(view);
-        uiName = (TextView) view.findViewById(R.id.name);
+        uiName = view.findViewById(R.id.name);
+        uiPosition = view.findViewById(R.id.position);
     }
+
+
+
+
 
 }

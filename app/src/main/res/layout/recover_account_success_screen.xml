@@ -45,7 +45,7 @@
 
         <TextView
             style="@style/recover_account_output"
-            android:layout_marginBottom="18dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/login"
             />
 
@@ -56,8 +56,8 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_gravity="end"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/circle_bg"
         android:padding="8dp"

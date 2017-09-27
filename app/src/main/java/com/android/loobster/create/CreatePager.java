@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class CreatePager extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[]{"Task", "Stage", "Project", "Post"};
+    private String tabTitles[] = new String[]{"Task", "Stage", "Stage", "Post"};
     private Fragment[] fragments;
 
     public CreatePager(FragmentManager fm) {

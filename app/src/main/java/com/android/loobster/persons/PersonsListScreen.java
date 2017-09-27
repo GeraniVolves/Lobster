@@ -9,7 +9,7 @@ import com.android.loobster.R;
 
 public class PersonsListScreen extends Activity {
 
-    private String[] myDataset = new String[]{
+    private String[] names = new String[]{
         "Country",
         "Sex",
         "Age",
@@ -25,12 +25,17 @@ public class PersonsListScreen extends Activity {
         "Hotfix"
     };
 
+    private Persona[] personas = new Persona[] {
+        new Persona("Ilya", "Developer"),
+        new Persona("Kseniya", "Junior Developer")
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.to_do_list_screen);
         RecyclerView uiList = findViewById(R.id.list);
         uiList.setLayoutManager(new LinearLayoutManager(this));
-        uiList.setAdapter(new PersonsListAdapter(myDataset));
+        uiList.setAdapter(new PersonsListAdapter(names));
     }
 }

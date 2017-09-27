@@ -3,10 +3,12 @@ package com.android.loobster;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 
 import com.android.loobster.create.CreateScreen;
+import com.android.loobster.persons.PersonsListScreen;
 
-class NavigateTo {
+public class NavigateTo {
 
     static void signup(@NonNull Context context) {
         context.startActivity(new Intent(context, SignUpScreen.class));
@@ -32,5 +34,9 @@ class NavigateTo {
 
     static void recoverSuccess(@NonNull Context context) {
         context.startActivity(new Intent(context, RecoverAccountSuccessScreen.class));
+    }
+
+    public static void personsList(@NonNull Context context) {
+        context.startActivity(new Intent(context, PersonsListScreen.class));
     }
 }

@@ -13,14 +13,14 @@
 
         <ImageView
             android:id="@+id/close"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_gravity="end"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/circle_bg"
-            android:padding="8dp"
+            android:padding="4dp"
             android:src="@drawable/ic_recovery_account_close"
             />
 
@@ -46,10 +46,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="14dp"
             android:text="@string/recover_account_description"
             android:textColor="@color/login_title"
-            android:textSize="19sp"
+            android:textSize="17sp"
             />
 
         <EditText
@@ -70,7 +70,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:background="#FF2D55"
         android:gravity="center"
         android:text="@string/error_recover_account"

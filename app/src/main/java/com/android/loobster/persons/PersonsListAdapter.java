@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.loobster.R;
-import com.android.loobster.persons.PersonViewHolder;
 
 public class PersonsListAdapter extends RecyclerView.Adapter<PersonViewHolder> {
     private String[] mDataset;
@@ -24,13 +23,11 @@ public class PersonsListAdapter extends RecyclerView.Adapter<PersonViewHolder> {
         mDataset = DatesUsers;
     }
 
-// Create new views (invoked by the layout manager)
-
     @Override
     public PersonViewHolder onCreateViewHolder(ViewGroup parent,
                                                int viewType) {
         // create a new view
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.to_do_list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.person_item, parent, false);
         // set the view's size, margins, paddings and layout parameters
         PersonViewHolder vh = new PersonViewHolder(view);
         return vh;
@@ -39,10 +36,8 @@ public class PersonsListAdapter extends RecyclerView.Adapter<PersonViewHolder> {
 
     @Override
     public void onBindViewHolder(PersonViewHolder holder, int position) {
-// - get element from your dataset at this position
-// - replace the contents of the view with that element
         holder.uiName.setText(mDataset[position]);
-
+        holder.uiPosition.setText(mDataset[position]);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
