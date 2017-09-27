@@ -5,6 +5,13 @@
     android:orientation="vertical"
     >
 
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,14 +22,16 @@
         <include layout="@layout/main_screen_tab_space" />
 
         <ImageView
+            android:id="@+id/tasks"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@color/colorPrimary"
+            android:src="#FF0000"
             />
 
         <include layout="@layout/main_screen_tab_space" />
 
         <ImageView
+            android:id="@+id/progress"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@color/colorPrimary"
