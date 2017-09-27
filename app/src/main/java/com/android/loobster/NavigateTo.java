@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 
 import com.android.loobster.create.CreateScreen;
-import com.android.loobster.create.CreateTaskFragment;
 
 class NavigateTo {
 
@@ -31,7 +30,7 @@ class NavigateTo {
         context.startActivity(new Intent(context, MainScreen.class));
     }
 
-    static void success(@NonNull Context context) {
-        context.startActivity(new Intent(context, RecoverAccountSuccess.class));
+    static void recoverSuccess(@NonNull Context context) {
+        context.startActivity(new Intent(context, RecoverAccountSuccessScreen.class));
     }
 }

@@ -28,7 +28,7 @@
         <activity android:name=".persons.PersonsListScreen" />
         <activity android:name=".RecoverAccountScreen" />
         <activity android:name=".MainScreen" />
-        <activity android:name=".RecoverAccountSuccess" />
+        <activity android:name=".RecoverAccountSuccessScreen" />
 
     </application>
 
