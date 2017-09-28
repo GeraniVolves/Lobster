@@ -20,24 +20,20 @@
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/circle_bg"
-            android:padding="4dp"
-            android:src="@drawable/ic_recovery_account_close"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_recover_account_close"
             />
 
 
         <TextView
+            android:layout_marginTop="45dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:text="@string/recover_account"
             android:textColor="@color/login_title"
-            android:textSize="33sp"
+            android:textSize="28sp"
             android:textStyle="bold"
             />
 
@@ -54,7 +50,7 @@
 
         <EditText
             style="@style/recover_account_input"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="41dp"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textColor="@color/edit_text_color"
