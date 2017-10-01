@@ -9,25 +9,9 @@ import com.android.loobster.R;
 
 public class PersonsListScreen extends Activity {
 
-    private String[] names = new String[]{
-        "Country",
-        "Sex",
-        "Age",
-        "Bob",
-        "Big Cock",
-        "Wet pussy",
-        "Hey Man",
-        "I'm dirty hacker",
-        "Lol Kekovich",
-        "Mda Mdamovich",
-        "Ilya Eremin",
-        "Crash",
-        "Hotfix"
-    };
-
     private Persona[] personas = new Persona[] {
-        new Persona("Ilya", "Developer"),
-        new Persona("Kseniya", "Junior Developer")
+        new Persona("Ilya", "Developer", "http://booksmont.ru/wp-content/uploads/2015/10/02.-vremya-priklyuchenij-kartinki-dlya-srisovki.jpg" ),
+        new Persona("Kseniya", "Junior Developer", "https://i12.fotocdn.net/s5/16/gallery_xs/60/2209889039.jpg" )
     };
 
     @Override
@@ -36,6 +20,6 @@ public class PersonsListScreen extends Activity {
         setContentView(R.layout.to_do_list_screen);
         RecyclerView uiList = findViewById(R.id.list);
         uiList.setLayoutManager(new LinearLayoutManager(this));
-        uiList.setAdapter(new PersonsListAdapter(names));
+        uiList.setAdapter(new PersonsListAdapter(personas));
     }
 }

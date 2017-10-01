@@ -4,16 +4,18 @@ package com.android.loobster.persons;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.android.loobster.R;
+import com.android.loobster.utils.ImageLoader;
 import com.android.loobster.utils.Views;
 
 public class PersonsListAdapter extends RecyclerView.Adapter<PersonViewHolder> {
 
-    private String[] userNames;
+    private Persona[] personas;
 
-    PersonsListAdapter(String[] usersNames) {
-        this.userNames = usersNames;
+    PersonsListAdapter(Persona[] usersNames) {
+        this.personas = usersNames;
     }
 
     @Override
@@ -22,17 +24,16 @@ public class PersonsListAdapter extends RecyclerView.Adapter<PersonViewHolder> {
         return new PersonViewHolder(view);
     }
 
-
     @Override
     public void onBindViewHolder(PersonViewHolder holder, int position) {
-        holder.uiName.setText(userNames[position]);
-        holder.uiPosition.setText(userNames[position]);
+        Persona persona = personas[position];
+        holder.uiName.setText(persona.name);
+        holder.uiPosition.setText(persona.position);
+        ImageLoader.loadCicrle(holder.uiAvatar, persona.avatarUrl);
     }
 
     @Override
     public int getItemCount() {
-        return userNames.length;
+        return personas.length;
     }
 }
-
-

@@ -53,14 +53,14 @@
 
     <ImageView
         android:id="@+id/close"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_gravity="end"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/circle_bg"
-        android:padding="8dp"
+        android:padding="4dp"
         android:src="@drawable/ic_recovery_account_close"
         />
 </FrameLayout>
