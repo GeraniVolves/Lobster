@@ -7,4 +7,5 @@
     <color name="clickable_text">@android:color/white</color>
     <color name="login_error_text">@android:color/white</color>
     <color name="login_title">@android:color/white</color>
+    <color name="error_bg">#FF2D55</color>
 </resources>

@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="128dp"
+        android:fitsSystemWindows="true"
         >
 
         <LinearLayout
@@ -65,6 +66,7 @@
                 />
 
             <EditText
+                android:id="@+id/password"
                 style="@style/authorization_input"
                 android:layout_marginTop="8dp"
                 android:hint="@string/password"
@@ -143,31 +145,32 @@
             android:orientation="horizontal"
             >
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="8dp"
-                android:src="@color/colorPrimary"
-                />
+            <include layout="@layout/partial_facebook_small_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="6dp"
+                android:paddingTop="2dp"
+                android:gravity="center"
                 android:text="@string/log_in_with_facebook"
                 android:textColor="@color/clickable_text"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 />
+
         </LinearLayout>
     </LinearLayout>
 
     <TextView
+        android:id="@+id/login_error"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#FF2D55"
+        android:layout_height="wrap_content"
+        android:background="@color/error_bg"
+        android:fitsSystemWindows="true"
         android:gravity="center"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
         android:text="@string/error_log_in"
         android:textColor="@color/login_error_text"
         android:visibility="gone"

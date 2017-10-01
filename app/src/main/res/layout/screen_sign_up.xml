@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="128dp"
+        android:fitsSystemWindows="true"
         >
 
         <LinearLayout
@@ -142,35 +143,36 @@
             android:orientation="horizontal"
             >
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="8dp"
-                android:src="@color/colorPrimary"
-                />
+            <include layout="@layout/partial_facebook_small_icon" />
 
             <TextView
                 android:id="@+id/facebook"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:paddingTop="2dp"
                 android:text="@string/sign_up_with_facebook"
-                android:textColor="#FFFFFF"
-                android:textSize="17sp"
+                android:textColor="@color/clickable_text"
+                android:textSize="13sp"
                 />
+
         </LinearLayout>
     </LinearLayout>
 
     <TextView
+        android:id="@+id/signup_error"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="#FF2D55"
+        android:layout_height="wrap_content"
+        android:background="@color/error_bg"
         android:gravity="center"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
         android:text="@string/error_sign_up"
         android:textColor="#FFF9FA"
         android:visibility="gone"
         tools:visibility="visible"
         />
+
 </FrameLayout>
