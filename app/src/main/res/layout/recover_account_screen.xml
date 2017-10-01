@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#202020"
+    android:background="@color/recover_screen_bg"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         android:orientation="vertical"
         >
 
@@ -28,7 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="38dp"
             />
-
 
         <TextView
             android:layout_width="match_parent"
@@ -53,6 +54,7 @@
             />
 
         <EditText
+            android:id="@+id/email"
             style="@style/recover_account_input"
             android:layout_marginTop="30dp"
             android:hint="@string/email"
@@ -61,21 +63,25 @@
             />
 
         <TextView
-            android:id="@+id/recover_output"
-            android:text="@string/recover"
+            android:id="@+id/recover_btn"
             style="@style/recover_account_output"
+            android:text="@string/recover"
             />
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/recover_error"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#FF2D55"
+        android:layout_height="wrap_content"
+        android:background="@color/error_bg"
         android:gravity="center"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
         android:text="@string/error_recover_account"
         android:textColor="@color/login_error_text"
         android:visibility="gone"
+        tools:visibility="visible"
         />
 
 </FrameLayout>

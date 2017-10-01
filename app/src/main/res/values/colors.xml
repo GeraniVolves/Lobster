@@ -8,4 +8,5 @@
     <color name="login_error_text">@android:color/white</color>
     <color name="login_title">@android:color/white</color>
     <color name="error_bg">#FF2D55</color>
+    <color name="recover_screen_bg">#202020</color>
 </resources>
