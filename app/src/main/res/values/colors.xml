@@ -7,4 +7,6 @@
     <color name="clickable_text">@android:color/white</color>
     <color name="login_error_text">@android:color/white</color>
     <color name="login_title">@android:color/white</color>
+    <color name="sign_up_string">#C8C7CC</color>
+    <color name="login_and_sigup_error">#FF2D55</color>
 </resources>
