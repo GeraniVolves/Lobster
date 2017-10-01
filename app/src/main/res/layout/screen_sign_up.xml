@@ -33,12 +33,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="@string/sign_up"
                 android:textColor="@color/login_title"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                android:layout_marginTop="20dp"
                 />
 
             <TextView
@@ -165,9 +165,9 @@
         android:layout_height="52dp"
         android:background="@color/login_and_sigup_error"
         android:gravity="center"
-        android:textSize="13sp"
         android:text="@string/error_sign_up"
         android:textColor="@color/login_error_text"
+        android:textSize="13sp"
         android:visibility="gone"
         tools:visibility="visible"
         />
