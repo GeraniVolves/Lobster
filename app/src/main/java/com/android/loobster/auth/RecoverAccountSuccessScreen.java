@@ -1,10 +1,13 @@
-package com.android.loobster;
+package com.android.loobster.auth;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
+
+import com.android.loobster.NavigateTo;
+import com.android.loobster.R;
 
 public class RecoverAccountSuccessScreen extends AppCompatActivity {
 

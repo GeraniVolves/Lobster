@@ -1,4 +1,4 @@
-package com.android.loobster;
+package com.android.loobster.auth;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.android.loobster.NavigateTo;
+import com.android.loobster.R;
 import com.android.loobster.utils.Animations;
 import com.android.loobster.utils.Dps;
 import com.android.loobster.utils.Views;

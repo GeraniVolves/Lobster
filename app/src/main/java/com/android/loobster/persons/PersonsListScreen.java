@@ -17,7 +17,7 @@ public class PersonsListScreen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.to_do_list_screen);
+        setContentView(R.layout.personas_screen);
         RecyclerView uiList = findViewById(R.id.list);
         uiList.setLayoutManager(new LinearLayoutManager(this));
         uiList.setAdapter(new PersonsListAdapter(personas));

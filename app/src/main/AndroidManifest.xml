@@ -17,18 +17,20 @@
         <activity android:name=".create.CreateScreen">
 
         </activity>
-        <activity android:name=".LoginScreen">
+        <activity android:name=".auth.LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpScreen" />
-        <activity android:name=".persons.PersonsListScreen" />
-        <activity android:name=".RecoverAccountScreen" />
+        <activity android:name=".auth.SignUpScreen" />
+        <activity android:name=".persons.PersonsListScreen">
+
+        </activity>
+        <activity android:name=".auth.RecoverAccountScreen" />
         <activity android:name=".MainScreen" />
-        <activity android:name=".RecoverAccountSuccessScreen" />
+        <activity android:name=".auth.RecoverAccountSuccessScreen" />
 
     </application>
 

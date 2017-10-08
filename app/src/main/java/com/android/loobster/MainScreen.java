@@ -6,15 +6,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.android.loobster.main.ProgressFragment;
-import com.android.loobster.main.TasksFragment;
+import com.android.loobster.tasks.TaskListPage;
 
 import java.util.List;
 
 public class MainScreen extends AppCompatActivity {
 
     private ProgressFragment progressFragment;
-    private TasksFragment    tasksFragment;
-
+    private TaskListPage     tasksFragment;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +35,6 @@ public class MainScreen extends AppCompatActivity {
             .beginTransaction()
             .add(R.id.container, progressFragment)
             .commit();
-
     }
 
     private void removeAllFragments() {
@@ -52,7 +50,7 @@ public class MainScreen extends AppCompatActivity {
 
     private void showTasksPage() {
         if (tasksFragment == null) {
-            tasksFragment = new TasksFragment();
+            tasksFragment = new TaskListPage();
         }
         removeAllFragments();
         getSupportFragmentManager()
