@@ -1,6 +1,7 @@
 package com.android.loobster.utils;
 
 import android.databinding.BindingAdapter;
+import android.view.View;
 import android.widget.ImageView;
 
 public class DataBindingImageView {
@@ -14,4 +15,12 @@ public class DataBindingImageView {
         }
     }
 
+    @BindingAdapter("showError")
+    public static void showError(View view, boolean showError) {
+        if (showError) {
+            Animations.fromTopToBottomSlide(view);
+        } else {
+            Animations.fromBottomToTopSlideAndGone(view);
+        }
+    }
 }

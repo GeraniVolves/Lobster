@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.android.loobster.create.post.CreatePostFragment;
+
 public class CreatePager extends FragmentPagerAdapter {
 
     private String tabTitles[] = new String[]{"Task", "Stage", "Project", "Post"};

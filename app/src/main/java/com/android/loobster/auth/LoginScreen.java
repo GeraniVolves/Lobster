@@ -1,5 +1,8 @@
 package com.android.loobster.auth;
 
+import android.arch.lifecycle.ViewModelProviders;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,36 +12,31 @@ import android.widget.TextView;
 
 import com.android.loobster.NavigateTo;
 import com.android.loobster.R;
+import com.android.loobster.create.post.CreatePostViewModel;
+import com.android.loobster.databinding.ScreenLoginBinding;
 import com.android.loobster.utils.Animations;
 import com.android.loobster.utils.Dps;
 import com.android.loobster.utils.Views;
 
 public class LoginScreen extends AppCompatActivity {
 
+    private LoginViewModel loginViewModel;
+
     private TextView uiError;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.screen_login);
-        uiError = findViewById(R.id.login_error);
+        loginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
+        ScreenLoginBinding viewDataBinding = DataBindingUtil.setContentView(this, R.layout.screen_login);
+        viewDataBinding.setVm(loginViewModel);
+
+        uiError = viewDataBinding.loginError;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             Views.increateTopPadding(uiError, Dps.toPixel(24, this));
         }
-        uiError.setVisibility(View.GONE);
+
         findViewById(R.id.sign_up).setOnClickListener(l -> NavigateTo.signup(this));
         findViewById(R.id.forgot_password).setOnClickListener(l -> NavigateTo.recoverAccount(this));
-        findViewById(R.id.login).setOnClickListener(v -> {
-            if (((TextView) findViewById(R.id.password)).getText().toString().equals("1")) {
-                Animations.fromTopToBottomSlide(uiError);
-            } else {
-                NavigateTo.main(this);
-            }
-        });
-    }
-
-    @Override protected void onResume() {
-        super.onResume();
-        uiError.setVisibility(View.GONE);
     }
 }

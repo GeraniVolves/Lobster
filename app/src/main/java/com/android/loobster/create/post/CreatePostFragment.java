@@ -1,4 +1,4 @@
-package com.android.loobster.create;
+package com.android.loobster.create.post;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
