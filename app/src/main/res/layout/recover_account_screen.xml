@@ -1,87 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/recover_screen_bg"
     >
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="vm"
+            type="com.android.loobster.auth.RecoverAccountViewModel"
+            />
+
+        <import type="android.view.View" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical"
+        android:background="@color/recover_screen_bg"
         >
 
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_gravity="end"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/circle_bg"
-            android:padding="4dp"
-            android:src="@drawable/ic_recovery_account_close"
-            />
-
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="38dp"
-            />
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="end"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/circle_bg"
+                android:padding="4dp"
+                android:src="@drawable/ic_recovery_account_close"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/recover_account"
+                android:textColor="@color/login_title"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/recover_account_description"
+                android:textColor="@color/login_title"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/recover_account_input"
+                android:layout_marginTop="30dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:text="@={vm.email}"
+                android:textColor="@color/edit_text_color"
+                />
+
+            <TextView
+                android:id="@+id/recover_btn"
+                style="@style/recover_account_output"
+                android:onClick="@{() -> vm.onRecoverClicked()}"
+                android:text="@string/recover"
+                />
+
+        </LinearLayout>
 
         <TextView
+            android:id="@+id/recover_error"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:text="@string/recover_account"
-            android:textColor="@color/login_title"
-            android:textSize="33sp"
-            android:textStyle="bold"
+            android:background="@color/error_bg"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="@{vm.errorMessage}"
+            android:textColor="@color/login_error_text"
+            app:showError="@{vm.showError}"
+            android:visibility="gone"
+            tools:visibility="visible"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="14dp"
-            android:text="@string/recover_account_description"
-            android:textColor="@color/login_title"
-            android:textSize="17sp"
-            />
+    </FrameLayout>
 
-        <EditText
-            android:id="@+id/email"
-            style="@style/recover_account_input"
-            android:layout_marginTop="30dp"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/edit_text_color"
-            />
-
-        <TextView
-            android:id="@+id/recover_btn"
-            style="@style/recover_account_output"
-            android:text="@string/recover"
-            />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/recover_error"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/error_bg"
-        android:gravity="center"
-        android:paddingBottom="16dp"
-        android:paddingTop="16dp"
-        android:text="@string/error_recover_account"
-        android:textColor="@color/login_error_text"
-        android:visibility="gone"
-        tools:visibility="visible"
-        />
-
-</FrameLayout>
+</layout>
