@@ -16,8 +16,8 @@ public class TaskViewHolderItem extends AbstractSectionableItem<TaskViewHolder, 
 
     public Task task;
 
-    public TaskViewHolderItem(@NonNull Task task) {
-        super(new DateHeaderItem());
+    public TaskViewHolderItem(@NonNull Task task, DateHeaderItem dateHeaderItem) {
+        super(dateHeaderItem);
         this.task = task;
     }
 

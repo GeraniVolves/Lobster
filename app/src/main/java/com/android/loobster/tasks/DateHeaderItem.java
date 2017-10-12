@@ -12,8 +12,14 @@ import eu.davidea.flexibleadapter.items.AbstractHeaderItem;
 
 public class DateHeaderItem extends AbstractHeaderItem {
 
+    private int date;
+
+    public DateHeaderItem(int date) {
+        this.date = date;
+    }
+
     @Override public boolean equals(Object o) {
-        return false;
+        return o != null && o instanceof DateHeaderItem && ((DateHeaderItem) o).date == date;
     }
 
     @Override public int getLayoutRes() {

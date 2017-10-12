@@ -1,6 +1,5 @@
 package com.android.loobster.tasks;
 
-import android.bluetooth.le.AdvertiseData;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -21,22 +20,25 @@ import eu.davidea.flexibleadapter.FlexibleAdapter;
 
 public class TaskListPage extends Fragment {
 
+    private DateHeaderItem today    = new DateHeaderItem(1);
+    private DateHeaderItem tomorrow = new DateHeaderItem(2);
+
     public static final String MARRY_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Curie-nobel-portrait-2-600.jpg/259px-Curie-nobel-portrait-2-600.jpg";
     List<TaskViewHolderItem> tasks = Arrays.asList(
         new TaskViewHolderItem(new Task(new Persona("Jim Karry", null, "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg"),
-            "Купить молока", "todo", "super important", "30 min")),
+            "Купить молока", "todo", "super important", "30 min"), today),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h")),
+            "Купить Радий и Полоний", "todo", "live of death", "7h"), today),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h")),
+            "Купить Радий и Полоний", "todo", "live of death", "7h"), today),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h")),
+            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h")),
+            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h")),
+            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h"))
+            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow)
     );
 
     @Nullable @Override
@@ -48,7 +50,6 @@ public class TaskListPage extends Fragment {
         RecyclerView uiTasksList = view.findViewById(R.id.tasks_rv);
         FlexibleAdapter<TaskViewHolderItem> adapter = new FlexibleAdapter<>(tasks);
         adapter.setDisplayHeadersAtStartUp(true);
-        adapter.setStickyHeaders(true);
         uiTasksList.setAdapter(adapter);
     }
 }
