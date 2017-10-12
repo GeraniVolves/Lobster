@@ -14,14 +14,15 @@ import com.android.loobster.tasks.models.Task;
 import com.android.loobster.utils.Views;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 
 public class TaskListPage extends Fragment {
 
-    private DateHeaderItem today    = new DateHeaderItem(1);
-    private DateHeaderItem tomorrow = new DateHeaderItem(2);
+    private DateHeaderItem today    = new DateHeaderItem(new Date());
+    private DateHeaderItem tomorrow = new DateHeaderItem(new Date(0));
 
     public static final String MARRY_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Curie-nobel-portrait-2-600.jpg/259px-Curie-nobel-portrait-2-600.jpg";
     List<TaskViewHolderItem> tasks = Arrays.asList(
