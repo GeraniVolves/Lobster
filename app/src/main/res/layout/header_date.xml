@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="14dp"
-    android:layout_marginRight="14dp"
     android:orientation="vertical"
-    android:text="Today"
-    android:textColor="@color/colorBlack"
-    android:textSize="34sp"
-    android:textStyle="bold"
-    />
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    >
+
+    <TextView
+        android:id="@+id/secondary_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="#8E8E93"
+        tools:text="Monday, June 5"
+        />
+
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:textColor="@color/colorBlack"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:text="Today"
+        />
+</LinearLayout>
