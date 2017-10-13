@@ -1,9 +1,12 @@
 package com.android.loobster;
 
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 
 import com.android.loobster.main.ProgressFragment;
 import com.android.loobster.tasks.TaskListPage;
@@ -21,8 +24,10 @@ public class MainScreen extends AppCompatActivity {
         if (savedInstanceState == null) {
             showTasksPage();
         }
+        ImageView uiTasks = findViewById(R.id.tasks);
+        uiTasks.setOnClickListener(v -> showTasksPage());
+        uiTasks.setColorFilter(ContextCompat.getColor(this, R.color.main_menu_selection), PorterDuff.Mode.MULTIPLY);
         findViewById(R.id.create).setOnClickListener(v -> NavigateTo.create(this));
-        findViewById(R.id.tasks).setOnClickListener(v -> showTasksPage());
         findViewById(R.id.progress).setOnClickListener(v -> showProgressPage());
     }
 

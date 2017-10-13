@@ -11,4 +11,5 @@
     <color name="recover_screen_bg">#202020</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000000</color>
+    <color name="main_menu_selection">#0076FF</color>
 </resources>
