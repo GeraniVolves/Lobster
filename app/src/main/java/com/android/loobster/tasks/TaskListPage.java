@@ -22,11 +22,12 @@ import eu.davidea.flexibleadapter.FlexibleAdapter;
 public class TaskListPage extends Fragment {
 
     private DateHeaderItem today    = new DateHeaderItem(new Date());
-    private DateHeaderItem tomorrow = new DateHeaderItem(new Date(0));
+    private DateHeaderItem tomorrow = new DateHeaderItem(new Date(1508371200000L));
 
     public static final String MARRY_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Curie-nobel-portrait-2-600.jpg/259px-Curie-nobel-portrait-2-600.jpg";
+    public static final String JIM_KARRY = "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg";
     List<TaskViewHolderItem> tasks = Arrays.asList(
-        new TaskViewHolderItem(new Task(new Persona("Jim Karry", null, "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg"),
+        new TaskViewHolderItem(new Task(new Persona("Jim Karry", null, JIM_KARRY ),
             "Купить молока", "todo", "super important", "30 min"), today),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h"), today),

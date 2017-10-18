@@ -6,6 +6,7 @@ import android.view.View;
 import com.android.loobster.R;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -42,7 +43,8 @@ public class DateHeaderItem extends AbstractHeaderItem<DateHeaderHolder> {
             holder.uiMainText.setText(R.string.today);
             holder.uiSecondaryText.setText(simpleDateFormat.format(date));
         } else {
-            holder.uiMainText.setText("Not Today");
+            holder.uiMainText.setText("Tomorrow");
+            holder.uiSecondaryText.setText(simpleDateFormat.format(date));
         }
     }
 }
