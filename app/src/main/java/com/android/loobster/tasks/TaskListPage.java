@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,13 +22,14 @@ import eu.davidea.flexibleadapter.FlexibleAdapter;
 
 public class TaskListPage extends Fragment {
 
-    private DateHeaderItem today    = new DateHeaderItem(new Date());
-    private DateHeaderItem tomorrow = new DateHeaderItem(new Date(1508371200000L));
+    private DateHeaderItem today         = new DateHeaderItem(new Date());
+    private DateHeaderItem tomorrow      = new DateHeaderItem(new Date((new Date().getTime() + 1000 * 60 * 60 * 24)));
+    private DateHeaderItem afterTomorrow = new DateHeaderItem(new Date((new Date().getTime() + 1000 * 60 * 60 * 24 * 2)));
 
     public static final String MARRY_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Curie-nobel-portrait-2-600.jpg/259px-Curie-nobel-portrait-2-600.jpg";
-    public static final String JIM_KARRY = "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg";
+    public static final String JIM_KARRY       = "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg";
     List<TaskViewHolderItem> tasks = Arrays.asList(
-        new TaskViewHolderItem(new Task(new Persona("Jim Karry", null, JIM_KARRY ),
+        new TaskViewHolderItem(new Task(new Persona("Jim Karry", null, JIM_KARRY),
             "Купить молока", "todo", "super important", "30 min"), today),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h"), today),
@@ -40,7 +42,13 @@ public class TaskListPage extends Fragment {
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow)
+            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
+         new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h"), afterTomorrow),
+        new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h"), afterTomorrow),
+        new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h"), afterTomorrow)
     );
 
     @Nullable @Override
@@ -53,5 +61,7 @@ public class TaskListPage extends Fragment {
         FlexibleAdapter<TaskViewHolderItem> adapter = new FlexibleAdapter<>(tasks);
         adapter.setDisplayHeadersAtStartUp(true);
         uiTasksList.setAdapter(adapter);
+        adapter.setSwipeEnabled(true);
+        adapter.getItemTouchHelperCallback().setSwipeFlags(ItemTouchHelper.LEFT);
     }
 }

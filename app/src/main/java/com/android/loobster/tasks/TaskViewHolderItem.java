@@ -26,11 +26,15 @@ public class TaskViewHolderItem extends AbstractSectionableItem<TaskViewHolder, 
     }
 
     @Override public int getLayoutRes() {
-        return R.layout.task_item;
+        return R.layout.task_swipeable_item;
     }
 
     @Override public TaskViewHolder createViewHolder(View view, FlexibleAdapter adapter) {
         return new TaskViewHolder(view, adapter);
+    }
+
+    @Override public boolean isSwipeable() {
+        return true;
     }
 
     @Override

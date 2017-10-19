@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <include layout="@layout/task_action_menu_delete"
+        android:id="@+id/tasks_swipe_actions"
+        android:visibility="gone"/>
+
+    <include layout="@layout/task_item"
+        android:id="@+id/front_view" />
+
+</FrameLayout>

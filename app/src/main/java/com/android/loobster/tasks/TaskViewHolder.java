@@ -12,6 +12,8 @@ import eu.davidea.viewholders.FlexibleViewHolder;
 
 class TaskViewHolder extends FlexibleViewHolder {
 
+    View      frontView;
+    View      uiSwipeActions;
     View      uiContainer;
     ImageView uiExecutorAvatar;
     TextView  uiExecutorName;
@@ -23,6 +25,9 @@ class TaskViewHolder extends FlexibleViewHolder {
     public TaskViewHolder(View view, FlexibleAdapter adapter) {
         super(view, adapter);
 
+        this.uiSwipeActions = view.findViewById(R.id.tasks_swipe_actions);
+        frontView = view.findViewById(R.id.front_view);
+
         uiContainer = view;
         uiExecutorAvatar = view.findViewById(R.id.executor_avatar);
         uiExecutorName = view.findViewById(R.id.executor_name);
@@ -31,4 +36,15 @@ class TaskViewHolder extends FlexibleViewHolder {
         uiPriority = view.findViewById(R.id.priority);
         uiTime = view.findViewById(R.id.time);
     }
+
+    @Override
+    public View getFrontView() {
+        return frontView;
+    }
+
+    @Override
+    public View getRearRightView() {
+        return uiSwipeActions;
+    }
+
 }
