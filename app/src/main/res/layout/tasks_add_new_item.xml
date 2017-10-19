@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="#B3202020"
     android:orientation="vertical"
+    android:gravity="bottom"
     >
 
     <LinearLayout
@@ -13,16 +14,15 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/bg_tasks_add_new_item"
         android:orientation="vertical"
-        android:padding="15dp"
+
         >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="4dp"
             android:orientation="horizontal"
+            android:padding="15dp"
             >
 
             <ImageView
@@ -42,13 +42,14 @@
                 />
         </LinearLayout>
 
+        <include layout="@layout/separator_black" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="19dp"
             android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            android:padding="15dp"
             >
 
             <ImageView
@@ -68,13 +69,14 @@
                 />
         </LinearLayout>
 
+        <include layout="@layout/separator_black" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="19dp"
             android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            android:padding="15dp"
             >
 
             <ImageView
@@ -107,6 +109,6 @@
         android:text="Cancel"
         android:textColor="#3A3A3A"
         android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
         />
 </LinearLayout>
