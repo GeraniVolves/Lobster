@@ -2,30 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="@drawable/bg_search_task"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
-    android:layout_marginTop="7dp"
-    android:paddingBottom="6dp"
-    android:paddingTop="6dp"
+    android:background="@drawable/bg_search_task"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="4dp"
     >
-    
+
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/search"
-        android:padding="3dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="8dp"
+        android:padding="3dp"
+        android:src="@drawable/search"
         />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#EAEBED"
         android:text="Search"
         android:textColor="#A4AAB3"
         android:textSize="15sp"
         />
-    
+
 </LinearLayout>

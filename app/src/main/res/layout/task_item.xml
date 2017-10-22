@@ -1,97 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="15dp"
-    android:background="@color/colorWhite"
+    xmlns:tools="http://schemas.android.com/tools"
     >
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/bg_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <ImageView
-            android:id="@+id/executor_avatar"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginTop="3dp"
-            tools:src="@drawable/ic_avatar_list"
-            />
-
-        <TextView
-            android:id="@+id/executor_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:textSize="15sp"
-            tools:text="Eremin Ilya"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:text="from"
-            android:textColor="#A4AAB3"
-            android:textSize="15sp"
-            />
-
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginTop="3dp"
-            tools:scr="@drawable/ic_avatar_list"
-            />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/task_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        tools:text="Купить молоко и служителей сатаны"
+        android:background="@drawable/task_bg"
+        android:layout_alignTop="@+id/item"
+        android:layout_alignBottom="@+id/item"
         />
 
     <LinearLayout
+        android:id="@+id/item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:padding="15dp"
         >
 
-        <TextView
-            android:id="@+id/type"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            tools:text="to-do"
-            />
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/executor_avatar"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="3dp"
+                tools:src="@drawable/ic_avatar_list"
+                />
+
+            <TextView
+                android:id="@+id/executor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textSize="15sp"
+                tools:text="Eremin Ilya"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="from"
+                android:textColor="#A4AAB3"
+                android:textSize="15sp"
+                />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="3dp"
+                tools:scr="@drawable/ic_avatar_list"
+                />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/priority"
+            android:id="@+id/task_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:textSize="16sp"
-            tools:text="normal"
+            android:layout_marginTop="8dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:text="Купить молоко и служителей сатаны"
             />
 
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            tools:text="2h 30m"
-            />
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="to-do"
+                />
+
+            <TextView
+                android:id="@+id/priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="16sp"
+                tools:text="normal"
+                />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="2h 30m"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

@@ -1,10 +1,10 @@
 package com.android.loobster.tasks;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.android.loobster.R;
 import com.android.loobster.persons.Persona;
 import com.android.loobster.tasks.models.Task;
+import com.android.loobster.utils.Dps;
 import com.android.loobster.utils.Views;
 
 import java.util.Arrays;
@@ -30,25 +31,25 @@ public class TaskListPage extends Fragment {
     public static final String JIM_KARRY       = "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg";
     List<TaskViewHolderItem> tasks = Arrays.asList(
         new TaskViewHolderItem(new Task(new Persona("Jim Karry", null, JIM_KARRY),
-            "Купить молока", "todo", "super important", "30 min"), today),
+            "Купить молока", "todo", "super important", "30 min", "#E747BB", "#EC6E9F", "#FFFFFF"), today),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h"), today),
+            "Купить Радий и Полоний", "todo", "live of death", "7h", "#487FFE", "#798DDB", "#FFFFFF"), today),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h"), today),
+            "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), today),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
+            "Купить Радий и Полоний", "todo", "live of death", "7h", "#E747BB", "#EC6E9F","#FFFFFF"), tomorrow),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
+            "Купить Радий и Полоний", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF", "https://i.pinimg.com/originals/83/c1/35/83c135b33c4cfeac76f1231f752ab2b0.jpg"), tomorrow),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
+            "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), tomorrow),
         new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
-            "Купить Радий и Полоний", "todo", "live of death", "7h"), tomorrow),
-         new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
-            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h"), afterTomorrow),
+            "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), tomorrow),
         new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
-            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h"), afterTomorrow),
+            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow),
         new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
-            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h"), afterTomorrow)
+            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow),
+        new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow)
     );
 
     @Nullable @Override
@@ -58,10 +59,22 @@ public class TaskListPage extends Fragment {
 
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         RecyclerView uiTasksList = view.findViewById(R.id.tasks_rv);
-        FlexibleAdapter<TaskViewHolderItem> adapter = new FlexibleAdapter<>(tasks);
+        uiTasksList.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+                super.getItemOffsets(outRect, view, parent, state);
+                RecyclerView.ViewHolder holder = parent.getChildViewHolder(view);
+                if (holder instanceof DateHeaderHolder) {
+                    outRect.top = Dps.toPixel(24, getContext());
+                } else {
+                    outRect.top = Dps.toPixel(8, getContext());
+                }
+                outRect.left = Dps.toPixel(8, getContext());
+                outRect.right = Dps.toPixel(8, getContext());
+            }
+        });
+        FlexibleAdapter<TaskViewHolderItem> adapter = new TasksAdapter(tasks);
         adapter.setDisplayHeadersAtStartUp(true);
         uiTasksList.setAdapter(adapter);
-        adapter.setSwipeEnabled(true);
-        adapter.getItemTouchHelperCallback().setSwipeFlags(ItemTouchHelper.LEFT);
     }
 }
