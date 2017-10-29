@@ -22,6 +22,7 @@ public class TaskViewHolderItem extends AbstractSectionableItem<TaskViewHolder, 
     public TaskViewHolderItem(@NonNull Task task, DateHeaderItem dateHeaderItem) {
         super(dateHeaderItem);
         this.task = task;
+        setDraggable(true);
     }
 
     @Override public boolean equals(Object o) {
@@ -34,10 +35,6 @@ public class TaskViewHolderItem extends AbstractSectionableItem<TaskViewHolder, 
 
     @Override public TaskViewHolder createViewHolder(View view, FlexibleAdapter adapter) {
         return new TaskViewHolder(view, adapter);
-    }
-
-    @Override public boolean isSwipeable() {
-        return true;
     }
 
     @Override

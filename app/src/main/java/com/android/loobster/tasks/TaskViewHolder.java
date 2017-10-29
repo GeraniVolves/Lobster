@@ -29,5 +29,4 @@ class TaskViewHolder extends FlexibleViewHolder {
         uiPriority = view.findViewById(R.id.priority);
         uiTime = view.findViewById(R.id.time);
     }
-
 }

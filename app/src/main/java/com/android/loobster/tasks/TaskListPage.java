@@ -76,5 +76,7 @@ public class TaskListPage extends Fragment {
         FlexibleAdapter<TaskViewHolderItem> adapter = new TasksAdapter(tasks);
         adapter.setDisplayHeadersAtStartUp(true);
         uiTasksList.setAdapter(adapter);
+        adapter.setLongPressDragEnabled(true);
     }
+
 }
