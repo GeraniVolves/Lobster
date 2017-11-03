@@ -40,5 +40,10 @@
     <string name="today">Today</string>
     <string name="tomorrow">Tomorrow</string>
     <string name="delete">Delete</string>
+    <string name="change_status">Change status</string>
+    <string name="to_do_2">To-do</string>
+    <string name="pause">Pause</string>
+    <string name="doing">Doing</string>
+    <string name="need_approve">Need approve</string>
 
 </resources>

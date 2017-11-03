@@ -8,14 +8,6 @@
 
     <include layout="@layout/search_top_bar" />
 
-    <com.android.loobster.utils.views.AudioView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@android:color/black"
-        />
-
     <android.support.v7.widget.RecyclerView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/tasks_rv"
         android:layout_width="match_parent"
