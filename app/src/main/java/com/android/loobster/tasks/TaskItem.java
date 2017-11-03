@@ -15,11 +15,11 @@ import java.util.List;
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 import eu.davidea.flexibleadapter.items.AbstractSectionableItem;
 
-public class TaskViewHolderItem extends AbstractSectionableItem<TaskViewHolder, DateHeaderItem> {
+public class TaskItem extends AbstractSectionableItem<TaskViewHolder, DateHeaderItem> {
 
     public Task task;
 
-    public TaskViewHolderItem(@NonNull Task task, DateHeaderItem dateHeaderItem) {
+    public TaskItem(@NonNull Task task, DateHeaderItem dateHeaderItem) {
         super(dateHeaderItem);
         this.task = task;
         setDraggable(true);

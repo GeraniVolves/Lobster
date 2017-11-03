@@ -9,11 +9,12 @@ import com.chauthai.swipereveallayout.ViewBinderHelper;
 import java.util.List;
 
 import eu.davidea.flexibleadapter.FlexibleAdapter;
+import eu.davidea.flexibleadapter.items.IFlexible;
 
-public class TasksAdapter extends FlexibleAdapter<TaskViewHolderItem> {
+public class TasksAdapter<T extends IFlexible> extends FlexibleAdapter<T> {
     private final ViewBinderHelper viewBinderHelper = new ViewBinderHelper();
 
-    public TasksAdapter(@Nullable List<TaskViewHolderItem> items) {
+    public TasksAdapter(@Nullable List<T> items) {
         super(items);
     }
 
@@ -21,7 +22,7 @@ public class TasksAdapter extends FlexibleAdapter<TaskViewHolderItem> {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position, List payloads) {
         super.onBindViewHolder(holder, position, payloads);
         Object item = getItem(position);
-        if (item instanceof TaskViewHolderItem) {
+        if (item instanceof TaskItem) {
             viewBinderHelper.bind((SwipeRevealLayout) holder.itemView, item.toString());
         }
     }

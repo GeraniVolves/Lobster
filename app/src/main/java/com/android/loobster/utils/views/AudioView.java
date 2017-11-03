@@ -24,9 +24,9 @@ public class AudioView extends View {
     public AudioView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         Random random = new Random();
-        audio = new float[70];
-        for (int i = 0; i < 70; i++) {
-            audio[i] = random.nextFloat() * 100;
+        audio = new float[50];
+        for (int i = 0; i < 50; i++) {
+            audio[i] = Math.max(random.nextFloat(), 0.1F) * 100;
         }
     }
 
@@ -39,7 +39,7 @@ public class AudioView extends View {
     @Override protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         float current = 0;
-        float itemWidth = ((float) getWidth()) / audio.length / 2;
+        float itemWidth = (float) getWidth() / 100;
         for (int i = 0; i < audio.length; i++) {
             float half = getHeight() / 2;
             rect.top = half - (half * (audio[i] / 100));

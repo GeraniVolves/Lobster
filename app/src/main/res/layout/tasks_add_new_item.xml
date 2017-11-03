@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B3202020"
     android:orientation="vertical"
     android:gravity="bottom"
     >
@@ -18,7 +17,7 @@
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:orientation="horizontal"
@@ -45,10 +44,10 @@
         <include layout="@layout/separator_black" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="3dp"
+            android:orientation="horizontal"
             android:padding="15dp"
             >
 
@@ -72,10 +71,10 @@
         <include layout="@layout/separator_black" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="3dp"
+            android:orientation="horizontal"
             android:padding="15dp"
             >
 

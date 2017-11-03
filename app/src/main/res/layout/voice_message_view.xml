@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voice_message"
     android:orientation="horizontal" 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,16 +8,16 @@
     android:padding="13dp">
     
     <ImageView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:src="@drawable/play_bottom"
         />
 
     <com.android.loobster.utils.views.AudioView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="32dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_gravity="center"
         />
 
 

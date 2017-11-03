@@ -10,6 +10,7 @@ import com.android.loobster.auth.RecoverAccountSuccessScreen;
 import com.android.loobster.auth.SignUpScreen;
 import com.android.loobster.create.CreateScreen;
 import com.android.loobster.persons.PersonsListScreen;
+import com.android.loobster.tasks.CreateDialog;
 
 public class NavigateTo {
 
@@ -41,5 +42,9 @@ public class NavigateTo {
 
     public static void personsList(@NonNull Context context) {
         context.startActivity(new Intent(context, PersonsListScreen.class));
+    }
+
+    public static void showCreateDialog(@NonNull Context context) {
+        CreateDialog.show(context);
     }
 }

@@ -20,6 +20,7 @@ import java.util.Date;
 import java.util.List;
 
 import eu.davidea.flexibleadapter.FlexibleAdapter;
+import eu.davidea.flexibleadapter.items.IFlexible;
 
 public class TaskListPage extends Fragment {
 
@@ -29,27 +30,28 @@ public class TaskListPage extends Fragment {
 
     public static final String MARRY_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Curie-nobel-portrait-2-600.jpg/259px-Curie-nobel-portrait-2-600.jpg";
     public static final String JIM_KARRY       = "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg";
-    List<TaskViewHolderItem> tasks = Arrays.asList(
-        new TaskViewHolderItem(new Task(new Persona("Jim Karry", null, JIM_KARRY),
+    List<IFlexible> tasks = Arrays.asList(
+        new TaskItem(new Task(new Persona("Jim Karry", null, JIM_KARRY),
             "Купить молока", "todo", "super important", "30 min", "#E747BB", "#EC6E9F", "#FFFFFF"), today),
-        new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#487FFE", "#798DDB", "#FFFFFF"), today),
-        new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), today),
-        new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#E747BB", "#EC6E9F","#FFFFFF"), tomorrow),
-        new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF", "https://i.pinimg.com/originals/83/c1/35/83c135b33c4cfeac76f1231f752ab2b0.jpg"), tomorrow),
-        new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), tomorrow),
-        new TaskViewHolderItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), tomorrow),
-        new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+        new TaskItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
             "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow),
-        new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+        new TaskItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
             "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow),
-        new TaskViewHolderItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
-            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow)
+        new TaskItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+            "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow),
+        new AudioItem(new Audio(), afterTomorrow)
     );
 
     @Nullable @Override
@@ -73,7 +75,7 @@ public class TaskListPage extends Fragment {
                 outRect.right = Dps.toPixel(8, getContext());
             }
         });
-        FlexibleAdapter<TaskViewHolderItem> adapter = new TasksAdapter(tasks);
+        @SuppressWarnings("unchecked") FlexibleAdapter<IFlexible> adapter = new TasksAdapter(tasks);
         adapter.setDisplayHeadersAtStartUp(true);
         uiTasksList.setAdapter(adapter);
         adapter.setLongPressDragEnabled(true);
