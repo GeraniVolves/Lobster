@@ -3,13 +3,19 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
     <color name="edit_text_color">@android:color/white</color>
     <color name="clickable_text">@android:color/white</color>
     <color name="login_error_text">@android:color/white</color>
     <color name="login_title">@android:color/white</color>
     <color name="error_bg">#FF2D55</color>
     <color name="recover_screen_bg">#202020</color>
-    <color name="colorWhite">#ffffff</color>
-    <color name="colorBlack">#000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_black">#000000</color>
     <color name="main_menu_selection">#0076FF</color>
+    <color name="note">#F0F0F8</color>
+    <color name="search_bar">#EAEBED</color>
+    <color name="note_stroke">#979797</color>
+    <color name="tasks_bg">@android:color/white</color>
 </resources>
+

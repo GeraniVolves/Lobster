@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.chauthai.swipereveallayout.SwipeRevealLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:mode="same_level"
     app:dragEdge="right"
+    app:mode="same_level"
     >
 
     <include layout="@layout/task_action_menu_delete" />
 
-    <include layout="@layout/task_item"
+    <include
         android:id="@+id/content"
+        layout="@layout/task_item"
         />
 
 </com.chauthai.swipereveallayout.SwipeRevealLayout>

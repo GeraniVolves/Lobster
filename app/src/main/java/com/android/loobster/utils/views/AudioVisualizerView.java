@@ -10,18 +10,18 @@ import android.view.View;
 
 import java.util.Random;
 
-public class AudioView extends View {
+public class AudioVisualizerView extends View {
 
     private float[] audio;
     Paint paint = new Paint() {{
         setColor(0xFF007AFF);
     }};
 
-    public AudioView(Context context) {
+    public AudioVisualizerView(Context context) {
         super(context);
     }
 
-    public AudioView(Context context, @Nullable AttributeSet attrs) {
+    public AudioVisualizerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         Random random = new Random();
         audio = new float[50];

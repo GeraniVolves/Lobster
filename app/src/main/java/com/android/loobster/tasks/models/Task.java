@@ -9,10 +9,10 @@ public class Task {
     public String  type;
     public String  priority;
     public String  time;
-    public String textColor;
+    public String  textColor;
     public String  bgColorLeft;
     public String  bgColorRight;
-    public String imageUrl;
+    public String  imageUrl;
 
     public Task(Persona executor, String name, String type, String priority, String time, String bgColorLeft, String bgColorRight, String textColor) {
         this.executor = executor;

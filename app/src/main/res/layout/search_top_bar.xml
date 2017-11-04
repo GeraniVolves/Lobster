@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#EAEBED"
-        android:text="Search"
+        android:text="@string/search"
         android:textColor="#A4AAB3"
         android:textSize="15sp"
         />

@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.view.View;
 
 import com.android.loobster.R;
+import com.android.loobster.tasks.models.Audio;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class AudioItem extends AbstractSectionableItem<AudioViewHolder, DateHead
     }
 
     @Override public int getLayoutRes() {
-        return R.layout.voice_message_view;
+        return R.layout.audio_view;
     }
 
     @Override public AudioViewHolder createViewHolder(View view, FlexibleAdapter adapter) {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/note_bg"
+    android:padding="16dp"
+    android:textColor="@color/color_black"
+    tools:text="Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business convention."
+    />

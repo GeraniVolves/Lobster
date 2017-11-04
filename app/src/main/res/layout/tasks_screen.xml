@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
+    android:background="@color/tasks_bg"
     >
 
     <include layout="@layout/search_top_bar" />
@@ -16,4 +17,3 @@
         />
 
 </LinearLayout>
-

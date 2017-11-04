@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:padding="25dp"
         android:text="@string/change_status"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/color_white"
         />
 
     <LinearLayout
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="@string/to_do_2"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/color_white"
             />
 
         <include layout="@layout/separator_grey" />
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="@string/pause"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/color_white"
             />
 
         <include layout="@layout/separator_grey" />
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="@string/doing"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/color_white"
             />
 
         <include layout="@layout/separator_grey" />
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="@string/need_approve"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/color_white"
             />
 
         <include layout="@layout/separator_grey" />
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="@string/done"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/color_white"
             />
 
     </LinearLayout>

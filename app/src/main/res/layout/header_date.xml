@@ -27,7 +27,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/color_black"
             android:textSize="34sp"
             android:textStyle="bold"
             tools:text="Today"

@@ -52,6 +52,8 @@ public class TaskItem extends AbstractSectionableItem<TaskViewHolder, DateHeader
         holder.uiType.setTextColor(Color.parseColor(task.textColor));
         holder.uiTime.setTextColor(Color.parseColor(task.textColor));
 
+        holder.uiTaskName.invalidate();
+
         if (task.hasImage()) {
             ImageLoader.load(holder.uiBackgound, task.imageUrl);
         } else {
