@@ -11,9 +11,11 @@ import android.view.ViewGroup;
 
 import com.android.loobster.R;
 import com.android.loobster.persons.Persona;
+import com.android.loobster.tasks.checkbox.CheckItem;
 import com.android.loobster.tasks.models.Audio;
 import com.android.loobster.tasks.models.Note;
 import com.android.loobster.tasks.models.Task;
+import com.android.loobster.tasks.models.ToDo;
 import com.android.loobster.tasks.note.NoteItem;
 import com.android.loobster.utils.Dps;
 import com.android.loobster.utils.Views;
@@ -41,6 +43,7 @@ public class TaskListPage extends Fragment {
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#487FFE", "#798DDB", "#FFFFFF"), today),
         new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), today),
+        new CheckItem(new ToDo("Can we trust him?", false), today),
         new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), tomorrow),
         new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
@@ -85,5 +88,4 @@ public class TaskListPage extends Fragment {
         uiTasksList.setAdapter(adapter);
         adapter.setLongPressDragEnabled(true);
     }
-
 }
