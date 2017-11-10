@@ -55,7 +55,7 @@ public class TaskItem extends AbstractSectionableItem<TaskViewHolder, DateHeader
         holder.uiTaskName.invalidate();
 
         if (task.hasImage()) {
-            ImageLoader.load(holder.uiBackgound, task.imageUrl);
+            ImageLoader.load(holder.uiBackground, task.imageUrl);
         } else {
             applyGradient(holder);
         }
@@ -64,6 +64,6 @@ public class TaskItem extends AbstractSectionableItem<TaskViewHolder, DateHeader
     private void applyGradient(TaskViewHolder holder) {
         GradientDrawable gd = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{Color.parseColor(task.bgColorLeft), Color.parseColor(task.bgColorRight)});
         gd.setCornerRadius(Dps.toPixel(8, holder.itemView.getContext()));
-        holder.uiBackgound.setBackgroundDrawable(gd);
+        holder.uiBackground.setBackgroundDrawable(gd);
     }
 }
