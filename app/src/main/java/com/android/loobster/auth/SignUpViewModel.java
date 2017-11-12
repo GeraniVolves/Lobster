@@ -15,7 +15,6 @@ public class SignUpViewModel extends ViewModel {
     public final ObservableField<String> errorMessage = new ObservableField<>();
 
     public SignUpViewModel() {
-        // TODO investigate viewmodel lifecycle
         email.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {
             @Override public void onPropertyChanged(Observable observable, int i) {
                 showError.set(false);
