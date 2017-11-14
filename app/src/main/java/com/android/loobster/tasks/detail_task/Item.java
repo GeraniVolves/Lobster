@@ -1,4 +1,4 @@
-package com.android.loobster.tasks.several_task;
+package com.android.loobster.tasks.detail_task;
 
 import android.view.View;
 
@@ -7,7 +7,7 @@ import java.util.List;
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 import eu.davidea.flexibleadapter.items.AbstractFlexibleItem;
 
-public class Item extends AbstractFlexibleItem<SeveralTaskViewHolder> {
+public class Item extends AbstractFlexibleItem<DetailTaskViewHolder> {
 
     @Override public boolean equals(Object o) {
         return false;
@@ -18,11 +18,11 @@ public class Item extends AbstractFlexibleItem<SeveralTaskViewHolder> {
         return 0;
     }
 
-    @Override public SeveralTaskViewHolder createViewHolder(View view, FlexibleAdapter adapter) {
+    @Override public DetailTaskViewHolder createViewHolder(View view, FlexibleAdapter adapter) {
         return null;
     }
 
     @Override
-    public void bindViewHolder(FlexibleAdapter adapter, SeveralTaskViewHolder holder, int position, List payloads) {
+    public void bindViewHolder(FlexibleAdapter adapter, DetailTaskViewHolder holder, int position, List payloads) {
     }
 }
