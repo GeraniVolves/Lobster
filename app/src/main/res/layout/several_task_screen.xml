@@ -85,7 +85,6 @@
             android:layout_marginTop="20dp"
             android:orientation="vertical"
             android:padding="13dp"
-            android:background="@drawable/bg_files_several_task"
             >
 
             <TextView
@@ -139,7 +138,7 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-            tools:listitem="@layout/files_detail_task"
+            tools:listitem="@layout/files_several_task"
             />
 
         <LinearLayout
