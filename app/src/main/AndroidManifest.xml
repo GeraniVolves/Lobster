@@ -31,6 +31,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".auth.RecoverAccountSuccessScreen" />
+        <activity android:name=".tasks.detail_task.DetailTaskScreen">
+
+        </activity>
 
     </application>
 

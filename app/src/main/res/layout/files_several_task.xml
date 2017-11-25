@@ -25,7 +25,7 @@
             android:id="@+id/files_task"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/bg_files_several_task"
+            android:background="@drawable/bg_detail_tasks"
             />
 
     </LinearLayout>

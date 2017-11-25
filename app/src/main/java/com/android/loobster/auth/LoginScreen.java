@@ -2,19 +2,15 @@ package com.android.loobster.auth;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.android.loobster.NavigateTo;
 import com.android.loobster.R;
-import com.android.loobster.create.post.CreatePostViewModel;
 import com.android.loobster.databinding.ScreenLoginBinding;
-import com.android.loobster.utils.Animations;
 import com.android.loobster.utils.Dps;
 import com.android.loobster.utils.Views;
 

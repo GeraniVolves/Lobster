@@ -66,4 +66,7 @@ public class TaskItem extends AbstractSectionableItem<TaskViewHolder, DateHeader
         gd.setCornerRadius(Dps.toPixel(8, holder.itemView.getContext()));
         holder.uiBackground.setBackgroundDrawable(gd);
     }
-}
+
+
+    }
+

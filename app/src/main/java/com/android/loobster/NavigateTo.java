@@ -11,6 +11,7 @@ import com.android.loobster.auth.SignUpScreen;
 import com.android.loobster.create.CreateScreen;
 import com.android.loobster.persons.PersonsListScreen;
 import com.android.loobster.tasks.CreateDialog;
+import com.android.loobster.tasks.detail_task.DetailTaskScreen;
 
 public class NavigateTo {
 
@@ -46,5 +47,9 @@ public class NavigateTo {
 
     public static void showCreateDialog(@NonNull Context context) {
         CreateDialog.show(context);
+    }
+
+    public static void detailTaskScreen (@NonNull Context context) {
+        context.startActivity(new Intent(context, DetailTaskScreen.class));
     }
 }

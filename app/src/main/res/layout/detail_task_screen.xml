@@ -79,37 +79,13 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            android:padding="13dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/description"
-                android:textColor="#030303"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:textColor="@color/color_black"
-                android:textSize="16sp"
-                tools:text="Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business convention. Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business conv…"
-                />
-        </LinearLayout>
+        <include layout="@layout/item_description" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="20dp"
             >
 
             <TextView
@@ -127,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_more"
-                android:textColor="#007AFF"
+                android:textColor="@color/add_see_more_less_detail_task"
                 android:textSize="14sp"
                 />
         </LinearLayout>
@@ -145,6 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="20dp"
             >
 
             <TextView
@@ -162,7 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_subtask"
-                android:textColor="#007AFF"
+                android:textColor="@color/add_see_more_less_detail_task"
                 android:textSize="14sp"
                 />
 
@@ -178,7 +155,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal"
             >
 
@@ -197,7 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_more"
-                android:textColor="#007AFF"
+                android:textColor="@color/add_see_more_less_detail_task"
                 android:textSize="14sp"
                 />
 
