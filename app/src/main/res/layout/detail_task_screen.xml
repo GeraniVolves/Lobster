@@ -79,6 +79,17 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="#030303"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
         <include layout="@layout/item_description" />
 
         <LinearLayout
