@@ -17,11 +17,11 @@ class TaskViewHolder extends FlexibleViewHolder {
     TextView  uiPriority;
     TextView  uiType;
     TextView  uiTime;
-    ImageView uiBackgound;
+    ImageView uiBackground;
 
     public TaskViewHolder(View view, FlexibleAdapter adapter) {
         super(view, adapter);
-        uiBackgound = view.findViewById(R.id.bg_image);
+        uiBackground = view.findViewById(R.id.bg_image);
         uiExecutorAvatar = view.findViewById(R.id.executor_avatar);
         uiExecutorName = view.findViewById(R.id.executor_name);
         uiTaskName = view.findViewById(R.id.task_name);

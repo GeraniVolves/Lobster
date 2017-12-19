@@ -5,8 +5,6 @@ import android.databinding.Observable;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
 
-import com.android.loobster.NavigateTo;
-
 public class RecoverAccountViewModel extends ViewModel {
 
     public final ObservableField<String> email = new ObservableField<>();
@@ -15,7 +13,6 @@ public class RecoverAccountViewModel extends ViewModel {
     public final ObservableField<String> errorMessage = new ObservableField<>();
 
     public RecoverAccountViewModel() {
-        // TODO investigate viewmodel lifecycle
         email.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {
             @Override public void onPropertyChanged(Observable observable, int i) {
                 showError.set(false);

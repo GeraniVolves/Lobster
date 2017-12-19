@@ -17,5 +17,6 @@
     <color name="search_bar">#EAEBED</color>
     <color name="note_stroke">#979797</color>
     <color name="tasks_bg">@android:color/white</color>
+    <color name="add_see_more_less_detail_task">#007AFF</color>
 </resources>
 

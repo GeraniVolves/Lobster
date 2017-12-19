@@ -14,7 +14,6 @@ public class LoginViewModel extends ViewModel {
     public final ObservableField<String> errorMessage = new ObservableField<>();
 
     public LoginViewModel() {
-        // TODO investigate viewmodel lifecycle
         login.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {
             @Override public void onPropertyChanged(Observable observable, int i) {
                 showError.set(false);
