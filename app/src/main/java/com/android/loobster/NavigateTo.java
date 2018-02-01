@@ -46,10 +46,14 @@ public class NavigateTo {
     }
 
     public static void showCreateDialog(@NonNull Context context) {
-        CreateDialog.show(context);
+        CreateDialog.showAddItem(context);
     }
 
     public static void detailTaskScreen (@NonNull Context context) {
         context.startActivity(new Intent(context, DetailTaskScreen.class));
+    }
+
+    public static void showChangeStatus (@NonNull Context context) {
+        CreateDialog.showChangeStatus(context);
     }
 }

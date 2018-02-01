@@ -19,6 +19,7 @@ public class NoteItem extends AbstractSectionableItem<NoteViewHolder, DateHeader
     public NoteItem(@NonNull Note note, DateHeaderItem header) {
         super(header);
         this.note = note;
+        setDraggable(true);
     }
 
     @Override public boolean equals(Object o) {
@@ -26,7 +27,7 @@ public class NoteItem extends AbstractSectionableItem<NoteViewHolder, DateHeader
     }
 
     @Override public int getLayoutRes() {
-        return R.layout.item_note;
+        return R.layout.note_swipeable_item;
     }
 
     @Override public NoteViewHolder createViewHolder(View view, FlexibleAdapter adapter) {

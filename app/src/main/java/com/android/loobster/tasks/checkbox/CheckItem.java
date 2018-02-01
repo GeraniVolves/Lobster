@@ -19,6 +19,7 @@ public class CheckItem extends AbstractSectionableItem<CheckViewHolder, DateHead
     public CheckItem(@NonNull ToDo toDo, DateHeaderItem header) {
         super(header);
         this.toDo = toDo;
+        setDraggable(true);
     }
 
     @Override public boolean equals(Object o) {
@@ -26,7 +27,7 @@ public class CheckItem extends AbstractSectionableItem<CheckViewHolder, DateHead
     }
 
     @Override public int getLayoutRes() {
-        return R.layout.check_box;
+        return R.layout.check_box_swipeable;
     }
 
     @Override public CheckViewHolder createViewHolder(View view, FlexibleAdapter adapter) {

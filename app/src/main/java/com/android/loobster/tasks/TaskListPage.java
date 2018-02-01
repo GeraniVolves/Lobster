@@ -18,6 +18,7 @@ import com.android.loobster.tasks.models.Task;
 import com.android.loobster.tasks.models.ToDo;
 import com.android.loobster.tasks.note.NoteItem;
 import com.android.loobster.utils.Dps;
+import com.android.loobster.utils.Keyboard;
 import com.android.loobster.utils.Views;
 
 import java.util.Arrays;
@@ -37,35 +38,36 @@ public class TaskListPage extends Fragment {
     public static final String JIM_KARRY       = "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg";
 
     List<IFlexible> tasks = Arrays.asList(
-        new TaskItem(new Task(new Persona("Jim Karry", null, JIM_KARRY),
+        new TaskItemHeader(new Task(new Persona("Jim Karry", null, JIM_KARRY),
             "Купить 123", "todo", "super important", "30 min", "#E747BB", "#EC6E9F", "#FFFFFF"), today),
-        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#487FFE", "#798DDB", "#FFFFFF"), today),
-        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), today),
         new CheckItem(new ToDo("Can we trust him?", false), today),
-        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), tomorrow),
-        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF", "https://i.pinimg.com/originals/83/c1/35/83c135b33c4cfeac76f1231f752ab2b0.jpg"), tomorrow),
-        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), tomorrow),
         new NoteItem(new Note("Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business convention."), tomorrow),
-        new TaskItem(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Мария Кюри", null, MARRY_IMAGE_URL),
             "Купить Радий и Полоний", "todo", "live of death", "7h", "#BD4355", "#F86774", "#FFFFFF"), tomorrow),
-        new TaskItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
             "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow),
-        new TaskItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
             "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow),
-        new TaskItem(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
+        new TaskItemHeader(new Task(new Persona("Гитлер", null, MARRY_IMAGE_URL),
             "Уничтожить мир. БУГАГАГАГА!", "todo", "live of death", "7h", "#E747BB", "#EC6E9F", "#FFFFFF"), afterTomorrow),
         new AudioItem(new Audio(), afterTomorrow)
-        );
+    );
 
     @Nullable @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         return Views.inflate(R.layout.tasks_screen, container);
     }
+
 
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         RecyclerView uiTasksList = view.findViewById(R.id.tasks_rv);
@@ -87,5 +89,15 @@ public class TaskListPage extends Fragment {
         adapter.setDisplayHeadersAtStartUp(true);
         uiTasksList.setAdapter(adapter);
         adapter.setLongPressDragEnabled(true);
+        uiTasksList.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+
+                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                    Keyboard.hide(getActivity());
+                }
+            }
+        });
+
     }
 }

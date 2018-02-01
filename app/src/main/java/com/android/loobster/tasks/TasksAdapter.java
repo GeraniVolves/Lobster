@@ -21,7 +21,7 @@ public class TasksAdapter<T extends IFlexible> extends FlexibleAdapter<T> {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position, List payloads) {
         Object item = getItem(position);
-        if (item instanceof TaskItem) {
+        if (item instanceof TaskItemHeader) {
             viewBinderHelper.bind((SwipeRevealLayout) holder.itemView, item.toString());
         }
         super.onBindViewHolder(holder, position, payloads);

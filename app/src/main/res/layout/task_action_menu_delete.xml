@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:gravity="right|center_vertical"
-    android:orientation="vertical"
-    android:paddingLeft="25dp"
-    android:paddingRight="25dp"
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:gravity="right|center_vertical"
+android:orientation="vertical"
+android:paddingLeft="25dp"
+android:paddingRight="25dp"
+android:id="@+id/action_task"
     >
 
-    <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/delete_icon"
-        />
+<ImageView
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:src="@drawable/delete_icon"
+    />
 
-    <TextView
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:gravity="center"
-        android:text="@string/delete"
-        android:textColor="#ff3b30"
-        />
+<TextView
+    android:layout_width="48dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:gravity="center"
+    android:text="@string/delete"
+    android:textColor="#ff3b30"
+    />
 
 </LinearLayout>

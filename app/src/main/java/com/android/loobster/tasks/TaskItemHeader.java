@@ -5,6 +5,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.NonNull;
 import android.view.View;
 
+import com.android.loobster.NavigateTo;
 import com.android.loobster.R;
 import com.android.loobster.tasks.models.Task;
 import com.android.loobster.utils.Dps;
@@ -15,11 +16,11 @@ import java.util.List;
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 import eu.davidea.flexibleadapter.items.AbstractSectionableItem;
 
-public class TaskItem extends AbstractSectionableItem<TaskViewHolder, DateHeaderItem> {
+public class TaskItemHeader extends AbstractSectionableItem<TaskViewHolder, DateHeaderItem> {
 
     public Task task;
 
-    public TaskItem(@NonNull Task task, DateHeaderItem dateHeaderItem) {
+    public TaskItemHeader(@NonNull Task task, DateHeaderItem dateHeaderItem) {
         super(dateHeaderItem);
         this.task = task;
         setDraggable(true);
@@ -59,6 +60,8 @@ public class TaskItem extends AbstractSectionableItem<TaskViewHolder, DateHeader
         } else {
             applyGradient(holder);
         }
+
+        holder.uiRoot.setOnClickListener(l -> NavigateTo.detailTaskScreen(holder.uiRoot.getContext()));
     }
 
     private void applyGradient(TaskViewHolder holder) {
@@ -66,7 +69,6 @@ public class TaskItem extends AbstractSectionableItem<TaskViewHolder, DateHeader
         gd.setCornerRadius(Dps.toPixel(8, holder.itemView.getContext()));
         holder.uiBackground.setBackgroundDrawable(gd);
     }
-
 
     }
 

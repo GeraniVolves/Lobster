@@ -14,7 +14,7 @@ public class AudioVisualizerView extends View {
 
     private float[] audio;
     Paint paint = new Paint() {{
-        setColor(0xFF007AFF);
+        setColor(0xFFFFFFFF);
     }};
 
     public AudioVisualizerView(Context context) {

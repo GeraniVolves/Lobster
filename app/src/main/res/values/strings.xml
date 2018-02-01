@@ -54,5 +54,11 @@
     <string name="new_subtask">New Subtask</string>
     <string name="comments">Comments (%1$d)</string>
     <string name="description_text"> Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business convention. Last month, my wife, Anne Doe, took me to Las Vegas because she had to go for a business conv…</string>
+    <string name="edit">Edit</string>
+    <string name="action">Action</string>
+    <string name="share">Share</string>
+    <string name="comments1">Comments</string>
+    <string name="more">more</string>
+    <string name="less">less</string>
 
 </resources>

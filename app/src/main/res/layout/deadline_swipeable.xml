@@ -8,11 +8,11 @@
     app:mode="same_level"
     >
 
-    <include layout="@layout/task_action_del_com_share" />
+    <include layout="@layout/task_action_menu_delete" />
 
     <include
         android:id="@+id/content"
-        layout="@layout/task_item"
+        layout="@layout/deadline_item_tasks"
         />
 
 </com.chauthai.swipereveallayout.SwipeRevealLayout>
